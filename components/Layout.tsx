@@ -31,7 +31,7 @@ const Layout: React.FC = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer>
+      <footer className="mt-4">
         <div>&copy; 2022 WatakumiBlog</div>
       </footer>
     </div>
