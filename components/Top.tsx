@@ -8,6 +8,9 @@ export default function Top() {
         RubyやJavaScriptに関する記事を公開しています。
       </p>
       <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 }
