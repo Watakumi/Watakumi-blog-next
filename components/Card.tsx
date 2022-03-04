@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Card(): JSX.Element {
   return (
-    <div>
+    <div className="pb-10">
       <hr />
       <div className="flex flex-row mt-10">
         <p className="w-1/4">May 29, 2022</p>
