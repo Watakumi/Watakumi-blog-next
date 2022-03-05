@@ -21,7 +21,7 @@ export function Card({ title, date, tags, summary }: Props): JSX.Element {
               <Tag name={tag} key={tag} />
             ))}
           </div>
-          <p className="text-gray-600 mt-8">{summary}</p>
+          <p className="text-gray-600 mt-4">{summary}</p>
           <Link href={'#'} passHref>
             <a className="inline-block mt-4 text-cyan-600	hover:text-cyan-800">
               Read More &rarr;
