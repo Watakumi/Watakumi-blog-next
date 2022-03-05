@@ -14,16 +14,17 @@ export const getPostSlugs = () => {
 };
 
 export const getPostBySlug = (slug: string, fields: string[] = []) => {
-  const fullPath = join(process.cwd(), slug, 'index.md');
+  const fullPath = join(process.cwd(), 'data/blog', slug, 'index.md');
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
   const { data, content } = matter(fileContents);
 
   type Item = {
     slug: string;
     content: string;
-    title?: string;
-    date?: string;
+    title: string;
+    date: string;
     tags?: string[];
+    summary: string;
   };
 
   const item: Item = {
@@ -32,6 +33,7 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
     title: '',
     date: '',
     tags: [],
+    summary: '',
   };
 
   fields.forEach((field) => {
@@ -42,7 +44,12 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
       item[field] = content;
     }
 
-    if (field === 'title' || field === 'date' || field === 'tags') {
+    if (
+      field === 'title' ||
+      field === 'date' ||
+      field === 'tags' ||
+      field === 'summary'
+    ) {
       item[field] = data[field];
     }
   });
