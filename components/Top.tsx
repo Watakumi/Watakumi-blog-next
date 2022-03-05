@@ -8,10 +8,6 @@ export default function Top() {
         title={'Latest'}
         description={'RubyやJavaScriptに関する記事を公開しています。'}
       />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
     </div>
   );
 }
