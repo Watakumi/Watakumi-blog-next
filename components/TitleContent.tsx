@@ -1,10 +1,12 @@
-export function TitleContent(): JSX.Element {
+type Props = {
+  title: string;
+  description: string;
+};
+export function TitleContent({ title, description }: Props): JSX.Element {
   return (
     <div>
-      <h1 className="text-4xl">Latest</h1>
-      <p className="pb-4 text-gray-800">
-        RubyやJavaScriptに関する記事を公開しています。
-      </p>
+      <h1 className="text-4xl">{title}</h1>
+      <p className="pb-4 text-gray-800">{description}</p>
     </div>
   );
 }
