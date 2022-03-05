@@ -1,9 +1,10 @@
 import { Card } from '../../components/Card';
+import { TitleContent } from '../../components/TitleContent';
 
 export default function Blog(): JSX.Element {
   return (
     <div>
-      <h1 className="text-4xl">All Posts</h1>
+      <TitleContent title="All Posts" />
       <Card />
       <Card />
       <Card />
