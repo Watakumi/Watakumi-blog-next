@@ -14,7 +14,9 @@ export function Card(): JSX.Element {
           </div>
           <p className="text-gray-600 mt-8">Note. This is description.</p>
           <Link href={'#'} passHref>
-            <a className="inline-block mt-4">Read More &rarr;</a>
+            <a className="inline-block mt-4 text-cyan-600	hover:text-cyan-800">
+              Read More &rarr;
+            </a>
           </Link>
         </div>
       </div>
