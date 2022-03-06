@@ -1,5 +1,8 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
 import { getAllPosts, getPostBySlug } from '../../lib/utils';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import emoji from 'remark-emoji';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export const getStaticPaths = async () => {
@@ -27,7 +30,9 @@ export const getStaticProps = async ({ params }: any) => {
   ]);
 
   return {
-    props: { post },
+    props: {
+      post,
+    },
   };
 };
 
@@ -41,7 +46,9 @@ const Post: NextPage<Props> = ({ post }) => (
       ))}
     </ul>
     <section>
-      <p>{post.content}</p>
+      <ReactMarkdown remarkPlugins={[emoji, remarkGfm]}>
+        {post.content}
+      </ReactMarkdown>
     </section>
   </article>
 );
