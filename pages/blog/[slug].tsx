@@ -1,10 +1,7 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
+import { Markdown } from '../../components/Markdown';
+import { Tag } from '../../components/Tag';
 import { getAllPosts, getPostBySlug } from '../../lib/utils';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import emoji from 'remark-emoji';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export const getStaticPaths = async () => {
@@ -39,40 +36,24 @@ export const getStaticProps = async ({ params }: any) => {
 };
 
 const Post: NextPage<Props> = ({ post }) => (
-  <article>
-    <h2>{post.title}</h2>
-    <p>{post.date}</p>
-    <ul>
-      {post.tags?.map((tag) => (
-        <li key={tag}>{tag}</li>
-      ))}
-    </ul>
-    <section>
-      <ReactMarkdown
-        remarkPlugins={[emoji, remarkGfm]}
-        components={{
-          code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || '');
-            return !inline && match ? (
-              <SyntaxHighlighter
-                language={match[1]}
-                PreTag="div"
-                {...props}
-                style={darcula}
-              >
-                {String(children).replace(/\n$/, '')}
-              </SyntaxHighlighter>
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            );
-          },
-        }}
-      >
-        {post.content}
-      </ReactMarkdown>
-    </section>
+  <article className="flex flex-col">
+    <div className="flex flex-col items-center border-b-2 pb-8">
+      <p className="text-gray-600">{post.date}</p>
+      <h1 className="text-5xl font-bold">{post.title}</h1>
+    </div>
+    <div className="flex flex-row mt-8">
+      <div className="w-1/4">
+        <p>TAGS</p>
+        <div className="flex flex-wrap gap-4">
+          {post.tags?.map((tag) => (
+            <Tag name={tag} key={tag} />
+          ))}
+        </div>
+      </div>
+      <section className="markdown w-3/4">
+        <Markdown markdown={post.content} />
+      </section>
+    </div>
   </article>
 );
 
