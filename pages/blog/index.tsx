@@ -22,6 +22,7 @@ export default function Blog({ allPosts }: Props): JSX.Element {
           summary={post.summary}
           tags={post.tags}
           date={post.date}
+          slug={post.slug}
         />
       ))}
     </div>
