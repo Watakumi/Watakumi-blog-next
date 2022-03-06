@@ -24,7 +24,11 @@ export function Markdown({ markdown }: Props): JSX.Element {
               {String(children).replace(/\n$/, '')}
             </SyntaxHighlighter>
           ) : (
-            <code className={className} {...props}>
+            <code
+              className={className}
+              {...props}
+              style={{ color: '#ec4899', backgroundColor: '#f5f5f5' }}
+            >
               {children}
             </code>
           );
