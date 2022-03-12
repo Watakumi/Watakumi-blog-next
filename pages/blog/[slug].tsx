@@ -39,7 +39,7 @@ const Post: NextPage<Props> = ({ post }) => (
   <article className="flex flex-col">
     <div className="flex flex-col items-center border-b-2 pb-8">
       <p className="text-gray-600">{post.date}</p>
-      <h1 className="md:leading-14 text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl">
+      <h1 className="text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl md:leading-[3.5rem]">
         {post.title}
       </h1>
     </div>
