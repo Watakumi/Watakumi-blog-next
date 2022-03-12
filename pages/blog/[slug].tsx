@@ -46,7 +46,7 @@ const Post: NextPage<Props> = ({ post }) => (
     <div className="mt-8 flex flex-row">
       <div className="w-1/4">
         <p>TAGS</p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col sm:gap-2 md:flex-row md:flex-wrap md:gap-4">
           {post.tags?.map((tag) => (
             <Tag name={tag} key={tag} />
           ))}
