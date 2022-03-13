@@ -78,3 +78,31 @@ export const getAllPosts = (fields: string[] = []) => {
 
   return posts;
 };
+
+export function getAllTags() {
+  const slugs = getPostSlugs();
+  let tagCount: {
+    [index: string]: number;
+  } = {};
+
+  slugs.forEach((slug) => {
+    const tagNames = getTagsBySlug(slug);
+    tagNames.forEach((tag) => {
+      if (tag in tagCount) {
+        tagCount[tag] += 1;
+      } else {
+        tagCount[tag] = 1;
+      }
+    });
+  });
+
+  return tagCount;
+}
+
+function getTagsBySlug(slug: string): string[] {
+  const fullPath = join(process.cwd(), 'data/blog', slug, 'index.md');
+  const fileContents = fs.readFileSync(fullPath, 'utf-8');
+  const { data } = matter(fileContents);
+
+  return data['tags'];
+}
