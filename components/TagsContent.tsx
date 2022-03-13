@@ -2,8 +2,10 @@ import { TagItem } from './TagItem';
 
 export function TagsContent(): JSX.Element {
   return (
-    <div className="flex flex-row gap-4 justify-center items-center">
-      <h1 className="text-5xl border-r-2 border-gray-400 pr-8">Tags</h1>
+    <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+      <h1 className="border-b-2 border-gray-400 pb-2 text-3xl sm:text-4xl md:border-b-0 md:border-r-2 md:pb-0 md:pr-8 md:text-5xl">
+        Tags
+      </h1>
       <div className="flex max-w-lg flex-wrap gap-4">
         <TagItem title="JavaScript" count={5} />
         <TagItem title="Ruby" count={1} />
