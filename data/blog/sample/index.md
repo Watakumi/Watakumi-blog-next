@@ -36,3 +36,7 @@ def fib():
 for index, fibonacci_number in zip(range(10), fib()):
      print('{i:3}: {f:3}'.format(i=index, f=fibonacci_number))
 ```
+
+Below will render an image:
+
+![](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)
