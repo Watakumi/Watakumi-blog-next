@@ -5,7 +5,9 @@ type Props = {
 export function TitleContent({ title, description }: Props): JSX.Element {
   return (
     <div>
-      <h1 className="text-4xl">{title}</h1>
+      <h1 className="text-3xl leading-10 md:text-4xl md:leading-[3rem]">
+        {title}
+      </h1>
       {description && <p className="pb-4 text-gray-800">{description}</p>}
     </div>
   );
