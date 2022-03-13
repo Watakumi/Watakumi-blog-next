@@ -30,7 +30,7 @@ export function MobileMenu(): JSX.Element {
           className="fixed h-full w-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
-        <div className="fixed mt-8 h-full">
+        <div className="fixed mt-8">
           <div className="px-12 py-4">
             <Link href={'/blog'} passHref>
               <a
