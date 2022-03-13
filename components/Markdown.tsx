@@ -3,6 +3,7 @@ import remarkGfm from 'remark-gfm';
 import emoji from 'remark-emoji';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import remarkImages from 'remark-images';
 
 type Props = {
   markdown: string;
@@ -10,7 +11,7 @@ type Props = {
 export function Markdown({ markdown }: Props): JSX.Element {
   return (
     <ReactMarkdown
-      remarkPlugins={[emoji, remarkGfm]}
+      remarkPlugins={[emoji, remarkGfm, remarkImages]}
       components={{
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
