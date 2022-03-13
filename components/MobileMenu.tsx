@@ -32,7 +32,7 @@ export function MobileMenu(): JSX.Element {
         ></button>
         <div className="fixed mt-8 h-full">
           <div className="px-12 py-4">
-            <Link href={'#'} passHref>
+            <Link href={'/blog'} passHref>
               <a
                 className="rounded-md px-4 py-[0.10rem] text-2xl font-bold tracking-widest text-gray-900 duration-100 hover:bg-zinc-800 hover:text-white"
                 onClick={onToggleNav}
@@ -42,7 +42,7 @@ export function MobileMenu(): JSX.Element {
             </Link>
           </div>
           <div className="px-12 py-4">
-            <Link href={'#'} passHref>
+            <Link href={'/tags'} passHref>
               <a
                 className="rounded-md px-4 py-[0.10rem] text-2xl font-bold tracking-widest text-gray-900 duration-100 hover:bg-zinc-800 hover:text-white"
                 onClick={onToggleNav}
@@ -52,7 +52,7 @@ export function MobileMenu(): JSX.Element {
             </Link>
           </div>
           <div className="px-12 py-4">
-            <Link href={'#'} passHref>
+            <Link href={'/projects'} passHref>
               <a
                 className="rounded-md px-4 py-[0.10rem] text-2xl font-bold tracking-widest text-gray-900 duration-100 hover:bg-zinc-800 hover:text-white"
                 onClick={onToggleNav}
