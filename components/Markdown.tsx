@@ -12,7 +12,7 @@ type Props = {
 export function Markdown({ markdown }: Props): JSX.Element {
   return (
     <ReactMarkdown
-      remarkPlugins={[emoji, remarkGfm, remarkImages, remarkUnwrapImages]}
+      remarkPlugins={[emoji, remarkGfm, remarkUnwrapImages]}
       components={{
         code({ node, inline, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
