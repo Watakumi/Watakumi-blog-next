@@ -23,7 +23,7 @@ export function ProjectCard({
         </Link>
       </div>
       <div className="w-auto space-y-4 p-6">
-        <h2 className="text-2xl">FirstProject</h2>
+        <h2 className="text-2xl">{title}</h2>
         <p className="w-full text-gray-600">{description}</p>
         <Link href={href} passHref>
           <a className="inline-block py-2 text-cyan-600	hover:text-cyan-800">
