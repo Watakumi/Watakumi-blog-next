@@ -1,7 +1,17 @@
 import Head from 'next/head';
-import Top from '../components/Top';
+import { InferGetStaticPropsType } from 'next';
+import { Card } from '../components/Card';
+import { TitleContent } from '../components/TitleContent';
+import { getAllPosts } from '../lib/utils';
+type Props = InferGetStaticPropsType<typeof getStaticProps>;
+export const getStaticProps = async () => {
+  const allPosts = getAllPosts(['slug', 'title', 'date', 'tags', 'summary']);
+  return {
+    props: { allPosts },
+  };
+};
 
-export default function Home() {
+export default function Home({ allPosts }: Props) {
   return (
     <div>
       <Head>
@@ -9,8 +19,20 @@ export default function Home() {
         <meta name="description" content="This is Watakumi Blog." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Top />
+      <TitleContent
+        title={'Latest'}
+        description={'RubyやJavaScriptに関する記事を公開しています。'}
+      />
+      {allPosts?.map((post) => (
+        <Card
+          key={post.slug}
+          title={post.title}
+          summary={post.summary}
+          tags={post.tags}
+          date={post.date}
+          slug={post.slug}
+        />
+      ))}
     </div>
   );
 }
