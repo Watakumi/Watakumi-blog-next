@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Menu } from './Menu';
 
@@ -8,7 +9,14 @@ export function Header(): JSX.Element {
         <div className="flex h-24 flex-wrap items-center justify-between border-b border-gray-200 px-2 font-medium">
           <div className="flex h-full w-1/4 items-center pr-4">
             <Link href={'/'} passHref>
-              <a>image</a>
+              <a>
+                <Image
+                  src={'/images/header_logo.png'}
+                  alt={'HeaderLogo'}
+                  width={10 * 12}
+                  height={4 * 12}
+                />
+              </a>
             </Link>
           </div>
           <Menu />
