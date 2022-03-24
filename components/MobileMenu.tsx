@@ -61,6 +61,16 @@ export function MobileMenu(): JSX.Element {
               </a>
             </Link>
           </div>
+          <div className="px-12 py-4">
+            <Link href={'/about'} passHref>
+              <a
+                className="rounded-md px-4 py-[0.10rem] text-2xl font-bold tracking-widest text-gray-900 duration-100 hover:bg-zinc-800 hover:text-white"
+                onClick={onToggleNav}
+              >
+                About
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
