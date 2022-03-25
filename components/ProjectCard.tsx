@@ -21,7 +21,7 @@ export function ProjectCard({
             <Image
               alt={title}
               src={src}
-              width={800}
+              width={900}
               height={450}
               className="object-cover object-center md:h-36 lg:h-48"
             />
