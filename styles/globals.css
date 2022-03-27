@@ -23,3 +23,7 @@
 .markdown h3 {
   @apply mb-2 text-xl leading-9 sm:text-2xl sm:leading-10 md:text-3xl md:leading-[3.5rem];
 }
+
+.markdown ol {
+  @apply list-inside list-decimal;
+}
