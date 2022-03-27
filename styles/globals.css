@@ -27,3 +27,7 @@
 .markdown ol {
   @apply list-inside list-decimal;
 }
+
+.markdown a {
+  @apply text-rose-500;
+}
