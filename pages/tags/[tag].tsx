@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 export const getStaticProps = ({ params }: any) => {
   const allPosts = getAllPosts(['slug', 'title', 'date', 'tags', 'summary']);
   const filteredPosts = allPosts.filter((post) =>
-    post.tags?.map((tag) => tag.includes(params.tag))
+    post.tags?.includes(params.tag)
   );
 
   return { props: { posts: filteredPosts, tag: params.tag } };
