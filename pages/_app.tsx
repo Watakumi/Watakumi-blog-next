@@ -6,7 +6,7 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
-      <SEO title="WatakumiBlog" />
+      <SEO title="WatakumiBlog" ogImage="/images/logo.png" />
       <Component {...pageProps} />
     </Layout>
   );
