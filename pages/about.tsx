@@ -7,6 +7,15 @@ export default function About() {
     <div>
       <TitleContent title="About" />
       <div className="flex flex-col items-center">
+        <div>
+          <Image
+            src={'/images/watakumi.jpeg'}
+            alt="watakumi"
+            width={150}
+            height={150}
+            className="rounded-full"
+          />
+        </div>
         <h2 className="text-3xl">好きなことを好きなだけ</h2>
         <Link href={'https://github.com/Watakumi'} passHref>
           <a className="text-2xl">
