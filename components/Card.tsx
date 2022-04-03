@@ -14,7 +14,7 @@ export function Card({ title, date, tags, summary, slug }: Props): JSX.Element {
     <div className="pb-10">
       <hr />
       <div className="mt-10 flex flex-col sm:flex-row">
-        <p className="w-1/4	 text-xl sm:text-base">{date}</p>
+        <p className="w-full text-xl sm:text-base md:w-1/4">{date}</p>
         <div className="w-full md:w-3/4">
           <p className="break-words text-3xl">
             <Link href={`/blog/${slug}`}>
