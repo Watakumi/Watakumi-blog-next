@@ -29,7 +29,11 @@ export function Markdown({ markdown }: Props): JSX.Element {
             <code
               className={className}
               {...props}
-              style={{ color: '#ec4899', backgroundColor: '#f5f5f5' }}
+              style={{
+                color: '#ec4899',
+                backgroundColor: '#f5f5f5',
+                wordBreak: 'break-all',
+              }}
             >
               {children}
             </code>
