@@ -10,7 +10,6 @@
 }
 
 .markdown {
-  @apply break-words;
 }
 
 .markdown h1 {
@@ -31,4 +30,8 @@
 
 .markdown a {
   @apply text-rose-500;
+}
+
+.markdown pre {
+  white-space: pre-wrap;
 }
