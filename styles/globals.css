@@ -35,3 +35,7 @@
 .markdown pre {
   white-space: pre-wrap;
 }
+
+.markdown pre code {
+  word-break: break-all;
+}
