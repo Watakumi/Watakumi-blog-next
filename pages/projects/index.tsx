@@ -5,7 +5,7 @@ import projectsData from '../../data/projectsdata';
 export default function Projects() {
   return (
     <div>
-      <TitleContent title="Projects" description="My Projects is Here." />
+      <TitleContent title="Projects" description="My Projects are Here." />
       <div className="-m-4 flex flex-wrap">
         {projectsData.map((data) => (
           <ProjectCard
