@@ -4,6 +4,7 @@ tags: ['terminal']
 date: '2021-08-08'
 draft: false
 summary: brootを使って快適なファイル探索を行う
+style: 'article'
 ---
 
 ## broot とは

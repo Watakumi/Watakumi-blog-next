@@ -26,6 +26,7 @@ export const getStaticProps = async ({ params }: any) => {
     'date',
     'tags',
     'content',
+    'style',
   ]);
 
   return {
@@ -33,6 +34,22 @@ export const getStaticProps = async ({ params }: any) => {
       post,
     },
   };
+};
+
+const StyledContent = (style: string, content: string) => {
+  if (style === 'article') {
+    return (
+      <section className="markdown sm:w-3/4">
+        <Markdown markdown={content} />
+      </section>
+    );
+  } else {
+    return (
+      <section className="sm:w-3/4">
+        <Markdown markdown={content} />
+      </section>
+    );
+  }
 };
 
 const Post: NextPage<Props> = ({ post }) => (
@@ -53,9 +70,7 @@ const Post: NextPage<Props> = ({ post }) => (
         </div>
       </div>
       <hr className="my-8 sm:hidden" />
-      <section className="markdown sm:w-3/4">
-        <Markdown markdown={post.content} />
-      </section>
+      {StyledContent(post.style, post.content)}
     </div>
   </article>
 );

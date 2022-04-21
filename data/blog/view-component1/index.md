@@ -4,6 +4,7 @@ tags: ['Ruby on Rails']
 date: '2021-05-29'
 draft: false
 summary: 現在、Railsでの主要な部分テンプレートの実装方法としてpartialが利用されていますが、アプリケーションが複雑になると、viewのロジックの豊富さが可読性の低下をもたらします。ここでは、viewのロジックをカプセル化し可読性を高めるための手段としてViewComponentを紹介します。
+style: 'article'
 ---
 
 ## View Component とは

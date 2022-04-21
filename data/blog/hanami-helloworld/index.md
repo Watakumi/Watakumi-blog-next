@@ -4,6 +4,7 @@ tags: ['Hanami', 'Ruby']
 date: '2021-08-14'
 draft: false
 summary: HanamiをDocker+PostgreSQL環境で始める手順を説明します。
+style: 'article'
 ---
 
 ## Dockerfile を作成

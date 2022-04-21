@@ -25,6 +25,8 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
     date: string;
     tags?: string[];
     summary: string;
+    draft: boolean;
+    style: string;
   };
 
   const item: Item = {
@@ -34,6 +36,8 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
     date: '',
     tags: [],
     summary: '',
+    draft: false,
+    style: '',
   };
 
   fields.forEach((field) => {
@@ -48,8 +52,12 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
       field === 'title' ||
       field === 'date' ||
       field === 'tags' ||
-      field === 'summary'
+      field === 'summary' ||
+      field === 'style'
     ) {
+      item[field] = data[field];
+    }
+    if (field === 'draft') {
       item[field] = data[field];
     }
   });
