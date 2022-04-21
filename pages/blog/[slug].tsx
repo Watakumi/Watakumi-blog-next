@@ -43,16 +43,17 @@ const Post: NextPage<Props> = ({ post }) => (
         {post.title}
       </h1>
     </div>
-    <div className="mt-8 flex flex-row">
+    <div className="mt-8 flex flex-col sm:flex-row">
       <div className="w-1/4">
-        <p>TAGS</p>
-        <div className="flex flex-col sm:gap-2 md:flex-row md:flex-wrap md:gap-4">
+        <p className="text-2xl sm:text-lg">TAGS</p>
+        <div className="flex flex-row gap-2 md:flex-row md:flex-wrap md:gap-4">
           {post.tags?.map((tag) => (
             <Tag name={tag} key={tag} />
           ))}
         </div>
       </div>
-      <section className="markdown w-3/4">
+      <hr className="my-8 sm:hidden" />
+      <section className="markdown sm:w-3/4">
         <Markdown markdown={post.content} />
       </section>
     </div>
