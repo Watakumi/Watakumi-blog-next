@@ -3,7 +3,6 @@ import remarkGfm from 'remark-gfm';
 import emoji from 'remark-emoji';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import remarkImages from 'remark-images';
 import remarkUnwrapImages from 'remark-unwrap-images';
 
 type Props = {
