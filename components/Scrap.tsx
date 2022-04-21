@@ -9,9 +9,7 @@ type Props = {
   markdown: string;
 };
 export function Scrap({ markdown }: Props): JSX.Element {
-  console.log(markdown);
   const separater = '\n---\n';
-  console.log(markdown.split(separater));
   const scrapedMarkdowns = markdown.split(separater);
 
   return (
