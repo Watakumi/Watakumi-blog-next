@@ -5,17 +5,25 @@ import { getAllPosts } from '../../lib/utils';
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(['slug', 'title', 'date', 'tags', 'summary']);
+  const allPosts = getAllPosts([
+    'slug',
+    'title',
+    'date',
+    'tags',
+    'summary',
+    'draft',
+  ]);
+  const filteredPosts = allPosts.filter((post) => post.draft == false);
   return {
-    props: { allPosts },
+    props: { filteredPosts },
   };
 };
 
-export default function Blog({ allPosts }: Props): JSX.Element {
+export default function Blog({ filteredPosts }: Props): JSX.Element {
   return (
     <div>
       <TitleContent title="All Posts" />
-      {allPosts?.map((post) => (
+      {filteredPosts?.map((post) => (
         <Card
           key={post.slug}
           title={post.title}
