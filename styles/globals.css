@@ -13,11 +13,11 @@
 }
 
 .markdown h1 {
-  @apply mb-8 text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl md:leading-[3.5rem];
+  @apply mb-8 border-b-2 text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl md:leading-[3.5rem];
 }
 
 .markdown h2 {
-  @apply mb-4 text-2xl leading-9 sm:text-3xl sm:leading-10 md:text-4xl md:leading-[3.5rem];
+  @apply mb-4 border-b-2 text-2xl leading-9 sm:text-3xl sm:leading-10 md:text-4xl md:leading-[3.5rem];
 }
 
 .markdown h3 {
