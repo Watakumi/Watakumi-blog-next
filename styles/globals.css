@@ -16,12 +16,20 @@
   @apply mb-8 border-b-2 text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl md:leading-[3.5rem];
 }
 
+.markdown h1:not(:first-child) {
+  @apply mt-16;
+}
+
 .markdown h2 {
   @apply mb-4 border-b-2 text-2xl leading-9 sm:text-3xl sm:leading-10 md:text-4xl md:leading-[3.5rem];
 }
 
+.markdown h2:not(:first-child) {
+  @apply mt-8;
+}
+
 .markdown h3 {
-  @apply mb-2 text-xl leading-9 sm:text-2xl sm:leading-10 md:text-3xl md:leading-[3.5rem];
+  @apply mb-2 mt-4 text-xl leading-9 sm:text-2xl sm:leading-10 md:text-3xl md:leading-[3.5rem];
 }
 
 .markdown ol {
@@ -37,5 +45,32 @@
 }
 
 .markdown pre code {
+  word-break: break-all;
+}
+
+.scrap {
+}
+
+.scrap h1 {
+  @apply mb-8 border-b-2 text-3xl font-bold leading-9 sm:text-4xl sm:leading-10 md:text-5xl md:leading-[3.5rem];
+}
+
+.scrap h2 {
+  @apply mb-4 border-b-2 text-2xl leading-9 sm:text-3xl sm:leading-10 md:text-4xl md:leading-[3.5rem];
+}
+
+.scrap h3 {
+  @apply mb-2 text-xl leading-9 sm:text-2xl sm:leading-10 md:text-3xl md:leading-[3.5rem];
+}
+
+.scrap a {
+  @apply text-rose-500;
+}
+
+.scrap pre {
+  white-space: pre-wrap;
+}
+
+.scrap pre code {
   word-break: break-all;
 }

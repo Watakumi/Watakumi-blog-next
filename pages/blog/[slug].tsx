@@ -1,5 +1,6 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
 import { Markdown } from '../../components/Markdown';
+import { Scrap } from '../../components/Scrap';
 import { Tag } from '../../components/Tag';
 import { getAllPosts, getPostBySlug } from '../../lib/utils';
 
@@ -45,8 +46,8 @@ const StyledContent = (style: string, content: string) => {
     );
   } else {
     return (
-      <section className="sm:w-3/4">
-        <Markdown markdown={content} />
+      <section className="scrap sm:w-3/4">
+        <Scrap markdown={content} />
       </section>
     );
   }
