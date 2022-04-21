@@ -2,7 +2,7 @@
 title: 'scrap test'
 tags: ['Hanami', 'Ruby']
 date: '2021-08-14'
-draft: false
+draft: true
 summary: HanamiをDocker+PostgreSQL環境で始める手順を説明します。
 style: 'scrap'
 ---
