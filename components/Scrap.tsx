@@ -16,7 +16,7 @@ export function Scrap({ markdown }: Props): JSX.Element {
     <div className="flex flex-col gap-8 text-white">
       {scrapedMarkdowns.map((markdown, index) => {
         return (
-          <div className="rounded-2xl bg-slate-500 p-6" key={index}>
+          <div className="rounded-2xl bg-[#737373] p-6" key={index}>
             <ReactMarkdown
               remarkPlugins={[emoji, remarkGfm, remarkUnwrapImages]}
               components={{
